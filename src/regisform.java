@@ -54,20 +54,20 @@ public class regisform extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
-        tb3 = new javax.swing.JTextField();
         p2 = new javax.swing.JPasswordField();
-        uname = new javax.swing.JLabel();
-        tb1 = new javax.swing.JTextField();
-        compass = new javax.swing.JLabel();
-        p1 = new javax.swing.JPasswordField();
-        pass = new javax.swing.JLabel();
-        pnum = new javax.swing.JLabel();
-        email = new javax.swing.JLabel();
-        tb2 = new javax.swing.JTextField();
-        regnow = new javax.swing.JButton();
-        cancel = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         regisform = new javax.swing.JLabel();
+        tb1 = new javax.swing.JTextField();
+        uname = new javax.swing.JLabel();
+        email = new javax.swing.JLabel();
+        tb2 = new javax.swing.JTextField();
+        tb3 = new javax.swing.JTextField();
+        pnum = new javax.swing.JLabel();
+        p1 = new javax.swing.JPasswordField();
+        pass = new javax.swing.JLabel();
+        compass = new javax.swing.JLabel();
+        regnow = new javax.swing.JButton();
+        cancel = new javax.swing.JButton();
 
         jLabel5.setFont(new java.awt.Font("Yu Gothic Medium", 1, 14)); // NOI18N
         jLabel5.setText("USERNAME");
@@ -157,64 +157,9 @@ public class regisform extends javax.swing.JFrame {
         jPanel4.setForeground(new java.awt.Color(153, 255, 0));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tb3.setEditable(false);
-        tb3.setBackground(new java.awt.Color(255, 255, 204));
-        jPanel4.add(tb3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, 210, 30));
-
         p2.setEditable(false);
         p2.setBackground(new java.awt.Color(255, 255, 204));
-        jPanel4.add(p2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 440, 210, 30));
-
-        uname.setFont(new java.awt.Font("Yu Gothic Medium", 1, 14)); // NOI18N
-        uname.setText("USERNAME");
-        jPanel4.add(uname, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 90, 50));
-
-        tb1.setEditable(false);
-        tb1.setBackground(new java.awt.Color(255, 255, 204));
-        jPanel4.add(tb1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, 210, 30));
-
-        compass.setFont(new java.awt.Font("Yu Gothic Medium", 1, 14)); // NOI18N
-        compass.setText("COMFIRM PASSWORD");
-        jPanel4.add(compass, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, 180, 50));
-
-        p1.setEditable(false);
-        p1.setBackground(new java.awt.Color(255, 255, 204));
-        jPanel4.add(p1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, 210, 30));
-
-        pass.setFont(new java.awt.Font("Yu Gothic Medium", 1, 14)); // NOI18N
-        pass.setText("PASSWORD");
-        jPanel4.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 330, 90, 50));
-
-        pnum.setFont(new java.awt.Font("Yu Gothic Medium", 1, 14)); // NOI18N
-        pnum.setText("PHONE NUMBER");
-        jPanel4.add(pnum, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, 160, 50));
-
-        email.setFont(new java.awt.Font("Yu Gothic Medium", 1, 14)); // NOI18N
-        email.setText("EMAIL");
-        jPanel4.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 200, 90, 50));
-
-        tb2.setEditable(false);
-        tb2.setBackground(new java.awt.Color(255, 255, 204));
-        tb2.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        jPanel4.add(tb2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 210, 30));
-
-        regnow.setFont(new java.awt.Font("Yu Gothic Medium", 1, 10)); // NOI18N
-        regnow.setText("REGISTER NOW");
-        regnow.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                regnowActionPerformed(evt);
-            }
-        });
-        jPanel4.add(regnow, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 490, 130, 30));
-
-        cancel.setFont(new java.awt.Font("Yu Gothic Medium", 1, 12)); // NOI18N
-        cancel.setText("CANCEL");
-        cancel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cancelActionPerformed(evt);
-            }
-        });
-        jPanel4.add(cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 530, -1, -1));
+        jPanel4.add(p2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 440, 210, 30));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 204));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -223,7 +168,62 @@ public class regisform extends javax.swing.JFrame {
         regisform.setText("REGISTRATION FORM");
         jPanel2.add(regisform, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 280, 60));
 
-        jPanel4.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 370, 540));
+        tb1.setEditable(false);
+        tb1.setBackground(new java.awt.Color(255, 255, 204));
+        jPanel2.add(tb1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, 210, 30));
+
+        uname.setFont(new java.awt.Font("Yu Gothic Medium", 1, 14)); // NOI18N
+        uname.setText("USERNAME");
+        jPanel2.add(uname, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 90, 50));
+
+        email.setFont(new java.awt.Font("Yu Gothic Medium", 1, 14)); // NOI18N
+        email.setText("EMAIL");
+        jPanel2.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 90, 50));
+
+        tb2.setEditable(false);
+        tb2.setBackground(new java.awt.Color(255, 255, 204));
+        tb2.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jPanel2.add(tb2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, 210, 30));
+
+        tb3.setEditable(false);
+        tb3.setBackground(new java.awt.Color(255, 255, 204));
+        jPanel2.add(tb3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 210, 30));
+
+        pnum.setFont(new java.awt.Font("Yu Gothic Medium", 1, 14)); // NOI18N
+        pnum.setText("PHONE NUMBER");
+        jPanel2.add(pnum, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, 160, 50));
+
+        p1.setEditable(false);
+        p1.setBackground(new java.awt.Color(255, 255, 204));
+        jPanel2.add(p1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 340, 210, 30));
+
+        pass.setFont(new java.awt.Font("Yu Gothic Medium", 1, 14)); // NOI18N
+        pass.setText("PASSWORD");
+        jPanel2.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 90, 50));
+
+        compass.setFont(new java.awt.Font("Yu Gothic Medium", 1, 14)); // NOI18N
+        compass.setText("COMFIRM PASSWORD");
+        jPanel2.add(compass, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, 180, 50));
+
+        regnow.setFont(new java.awt.Font("Yu Gothic Medium", 1, 10)); // NOI18N
+        regnow.setText("REGISTER NOW");
+        regnow.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                regnowActionPerformed(evt);
+            }
+        });
+        jPanel2.add(regnow, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 450, 130, 30));
+
+        cancel.setFont(new java.awt.Font("Yu Gothic Medium", 1, 12)); // NOI18N
+        cancel.setText("CANCEL");
+        cancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelActionPerformed(evt);
+            }
+        });
+        jPanel2.add(cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 500, -1, -1));
+
+        jPanel4.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, 370, 540));
 
         jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 590));
 
@@ -232,13 +232,13 @@ public class regisform extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void regnowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regnowActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_regnowActionPerformed
-
     private void cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cancelActionPerformed
+
+    private void regnowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regnowActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_regnowActionPerformed
 
     /**
      * @param args the command line arguments
