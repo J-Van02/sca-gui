@@ -1,3 +1,11 @@
+
+import admin.admin_dashboard;
+import admin.applicantDashboard;
+import config.dbConnector;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -17,6 +25,26 @@ public class loginform extends javax.swing.JFrame {
         initComponents();
     }
 
+    
+   static String status;
+    static String type;
+    public static boolean loginAcc(String username, String password){
+        dbConnector connector = new dbConnector();
+        
+        try{
+            String query = "SELECT * FROM tbl_user WHERE u_usern = '" + username + "' AND u_pass = '" + password + "'";
+            ResultSet resultSet = connector.getData(query);
+            if(resultSet.next()){
+                status = resultSet.getString("u_status");
+                type = resultSet.getString("u_type");
+                return true;
+            }else{
+                return false;
+            }
+            }catch (SQLException ex){
+                return false;
+            }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -29,10 +57,8 @@ public class loginform extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        pass = new javax.swing.JLabel();
+        txf = new javax.swing.JLabel();
         grant = new javax.swing.JLabel();
-        tb1 = new javax.swing.JTextField();
-        tb2 = new javax.swing.JPasswordField();
         uname = new javax.swing.JLabel();
         sca = new javax.swing.JLabel();
         creat = new javax.swing.JButton();
@@ -41,6 +67,8 @@ public class loginform extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
+        username = new javax.swing.JTextField();
+        pass = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -56,26 +84,13 @@ public class loginform extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 204));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        pass.setFont(new java.awt.Font("Yu Gothic Medium", 1, 14)); // NOI18N
-        pass.setText("PASSWORD");
-        jPanel2.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, 90, 50));
+        txf.setFont(new java.awt.Font("Yu Gothic Medium", 1, 14)); // NOI18N
+        txf.setText("PASSWORD");
+        jPanel2.add(txf, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, 90, 50));
 
         grant.setFont(new java.awt.Font("Yu Gothic Medium", 1, 24)); // NOI18N
         grant.setText("GRANT!");
         jPanel2.add(grant, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, 100, 60));
-
-        tb1.setEditable(false);
-        tb1.setBackground(new java.awt.Color(255, 255, 204));
-        tb1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tb1ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(tb1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, 210, 30));
-
-        tb2.setEditable(false);
-        tb2.setBackground(new java.awt.Color(255, 255, 204));
-        jPanel2.add(tb2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 370, 210, 30));
 
         uname.setFont(new java.awt.Font("Yu Gothic Medium", 1, 14)); // NOI18N
         uname.setText("USERNAME");
@@ -87,6 +102,11 @@ public class loginform extends javax.swing.JFrame {
 
         creat.setFont(new java.awt.Font("Yu Gothic Medium", 1, 10)); // NOI18N
         creat.setText("CREAT ACCOUNT");
+        creat.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                creatMouseClicked(evt);
+            }
+        });
         creat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 creatActionPerformed(evt);
@@ -105,6 +125,11 @@ public class loginform extends javax.swing.JFrame {
 
         log.setFont(new java.awt.Font("Yu Gothic Medium", 1, 10)); // NOI18N
         log.setText("LOGIN");
+        log.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                logMouseClicked(evt);
+            }
+        });
         log.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 logActionPerformed(evt);
@@ -139,6 +164,14 @@ public class loginform extends javax.swing.JFrame {
         });
         jPanel2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 470, 160, 30));
 
+        username.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usernameActionPerformed(evt);
+            }
+        });
+        jPanel2.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, 230, 30));
+        jPanel2.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, 230, 30));
+
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 0, 500, 590));
 
         pack();
@@ -168,9 +201,39 @@ public class loginform extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
 
-    private void tb1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tb1ActionPerformed
+    private void creatMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_creatMouseClicked
+        regisform rf = new regisform();
+        rf.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_creatMouseClicked
+
+    private void logMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logMouseClicked
+    if(loginAcc(username.getText(), pass.getText())){
+        if(!status.equals("Active")){
+            JOptionPane.showMessageDialog(this, "In-Active Account contact Admin", "Error", JOptionPane.ERROR_MESSAGE);
+        }else{
+            if(type.equals("Admin")){
+                JOptionPane.showMessageDialog(null, "Login Successfully");
+                admin_dashboard ad = new admin_dashboard();
+                ad.setVisible(true);
+                this.dispose();
+            }else if(type.equals("Applicant")){
+                JOptionPane.showMessageDialog(null, "Login Successfully");
+                applicantDashboard ad = new applicantDashboard();
+                ad.setVisible(true);
+                this.dispose();
+            }else{
+                JOptionPane.showMessageDialog(this, "No Account type found contact the Admin", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }else{
+        JOptionPane.showMessageDialog(this, "Invalid Account", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_logMouseClicked
+
+    private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tb1ActionPerformed
+    }//GEN-LAST:event_usernameActionPerformed
 
     /**
      * @param args the command line arguments
@@ -218,10 +281,10 @@ public class loginform extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JButton log;
-    private javax.swing.JLabel pass;
+    private javax.swing.JPasswordField pass;
     private javax.swing.JLabel sca;
-    private javax.swing.JTextField tb1;
-    private javax.swing.JPasswordField tb2;
+    private javax.swing.JLabel txf;
     private javax.swing.JLabel uname;
+    private javax.swing.JTextField username;
     // End of variables declaration//GEN-END:variables
 }
