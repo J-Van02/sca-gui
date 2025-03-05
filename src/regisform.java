@@ -187,11 +187,11 @@ public class regisform extends javax.swing.JFrame {
         jPanel3.setForeground(new java.awt.Color(153, 255, 0));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 153));
+        jPanel4.setBackground(new java.awt.Color(0, 0, 0));
         jPanel4.setForeground(new java.awt.Color(153, 255, 0));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 204));
+        jPanel2.setBackground(new java.awt.Color(255, 51, 0));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         regisform.setFont(new java.awt.Font("Yu Gothic Medium", 1, 24)); // NOI18N
@@ -247,6 +247,11 @@ public class regisform extends javax.swing.JFrame {
         jPanel2.add(cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 560, -1, -1));
 
         role.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "Applicant" }));
+        role.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                roleActionPerformed(evt);
+            }
+        });
         jPanel2.add(role, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, 210, 30));
 
         p1.setFont(new java.awt.Font("Yu Gothic Medium", 1, 14)); // NOI18N
@@ -311,6 +316,10 @@ public class regisform extends javax.swing.JFrame {
         this.dispose();
         }
     }//GEN-LAST:event_regnowMouseClicked
+
+    private void roleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_roleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_roleActionPerformed
 
     /**
      * @param args the command line arguments

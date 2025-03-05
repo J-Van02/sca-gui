@@ -75,28 +75,32 @@ public class loginform extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Money Girl Pop Art Large Poster.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\SCC12\\Downloads\\Cash app icon.jpg")); // NOI18N
         jLabel1.setText("jLabel1");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-120, 0, 660, 590));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 540, 590));
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 204));
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txf.setFont(new java.awt.Font("Yu Gothic Medium", 1, 14)); // NOI18N
+        txf.setForeground(new java.awt.Color(255, 255, 255));
         txf.setText("PASSWORD");
         jPanel2.add(txf, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, 90, 50));
 
         grant.setFont(new java.awt.Font("Yu Gothic Medium", 1, 24)); // NOI18N
+        grant.setForeground(new java.awt.Color(255, 255, 255));
         grant.setText("GRANT!");
         jPanel2.add(grant, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, 100, 60));
 
         uname.setFont(new java.awt.Font("Yu Gothic Medium", 1, 14)); // NOI18N
+        uname.setForeground(new java.awt.Color(255, 255, 255));
         uname.setText("USERNAME");
         jPanel2.add(uname, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, 90, 50));
 
         sca.setFont(new java.awt.Font("Yu Gothic Medium", 1, 24)); // NOI18N
+        sca.setForeground(new java.awt.Color(255, 255, 255));
         sca.setText("STUDENT CASH ASSISTANCE");
         jPanel2.add(sca, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 370, 60));
 
