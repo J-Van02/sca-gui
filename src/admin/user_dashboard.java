@@ -57,6 +57,7 @@ public class user_dashboard extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
 
         label1.setText("label1");
 
@@ -92,7 +93,7 @@ public class user_dashboard extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 570, 550));
 
-        jPanel2.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel2.setBackground(new java.awt.Color(255, 102, 0));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/profile-user.png"))); // NOI18N
@@ -106,19 +107,20 @@ public class user_dashboard extends javax.swing.JFrame {
         jLabel3.setText("johnivan33@gmail.com");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 198, 162, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/agenda_16503561.png"))); // NOI18N
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 297, -1, -1));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/door.png"))); // NOI18N
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Yu Gothic Medium", 1, 14)); // NOI18N
         jLabel5.setText("Calendar");
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(62, 297, 162, -1));
-
-        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\SCC12\\Downloads\\door.png")); // NOI18N
         jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Yu Gothic Medium", 1, 14)); // NOI18N
         jLabel8.setText("Log Out");
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 460, -1, -1));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/agenda_16503561.png"))); // NOI18N
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 297, -1, -1));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 550));
 
@@ -163,6 +165,7 @@ public class user_dashboard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

@@ -46,7 +46,7 @@ public class applicantDashboard extends javax.swing.JFrame {
         jLabel2.setText("Applicant Dashboard");
 
         jPanel2.setBackground(new java.awt.Color(255, 102, 0));
-        jPanel2.setForeground(new java.awt.Color(255, 51, 0));
+        jPanel2.setForeground(new java.awt.Color(255, 102, 0));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

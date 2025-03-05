@@ -191,7 +191,7 @@ public class regisform extends javax.swing.JFrame {
         jPanel4.setForeground(new java.awt.Color(153, 255, 0));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel2.setBackground(new java.awt.Color(255, 102, 0));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         regisform.setFont(new java.awt.Font("Yu Gothic Medium", 1, 24)); // NOI18N
@@ -215,7 +215,7 @@ public class regisform extends javax.swing.JFrame {
         jPanel2.add(p, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, 90, 30));
 
         compass.setFont(new java.awt.Font("Yu Gothic Medium", 1, 14)); // NOI18N
-        compass.setText("COMFIRM PASSWORD");
+        compass.setText("CONFIRM PASSWORD");
         jPanel2.add(compass, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 430, 180, 50));
 
         regnow.setFont(new java.awt.Font("Yu Gothic Medium", 1, 10)); // NOI18N
@@ -252,7 +252,7 @@ public class regisform extends javax.swing.JFrame {
                 roleActionPerformed(evt);
             }
         });
-        jPanel2.add(role, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, 210, 30));
+        jPanel2.add(role, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, 230, 30));
 
         p1.setFont(new java.awt.Font("Yu Gothic Medium", 1, 14)); // NOI18N
         p1.setText("PASSWORD");
